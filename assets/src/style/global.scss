@@ -1,5 +1,4 @@
-/* USER VARIABLES SECTION */
-/* dar colors */
+/* variables */
 $primary: #612f8c;
 $secondary: #d9c3ed;
 $dar-gold: #d8de3f;
@@ -13,19 +12,13 @@ $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
 
-// buttons
-$btn-padding-y: 10px;
-$btn-padding-x: 32px;
-$btn-border-radius: 20px;
-
 :root {
-  --accent: #1d7131;
-  --accent--rgb: 29,113,49;
   --primary: #612f8c;
   --secondary: #d9c3ed;
   --dar-gold: #d8de3f;
   --dar-pink: #ed1566;
   --dar-devider: #8b4dc0;
+
   --black: #000000;
   --black--rgb: 0, 0, 0;
   --white: #ffffff;
@@ -42,7 +35,8 @@ $btn-border-radius: 20px;
 }
 
 /* FONTS LOAD SECTION */
-/* @mixin font($fname, $fstyle, $fweight, $furl) {
+/*
+@mixin font($fname, $fstyle, $fweight, $furl) {
   @font-face {
     font-family: $fname;
 		font-style: $fstyle;
@@ -56,35 +50,93 @@ $btn-border-radius: 20px;
 @include font('rubik-ag', normal, 700, '../fonts/rubik-700.woff2');
 
 @include font('robotoslab-ag', normal, 400, '../fonts/roboto-slab-400.woff2');
-@include font('robotoslab-ag', normal, 700, '../fonts/roboto-slab-700.woff2'); */
+@include font('robotoslab-ag', normal, 700, '../fonts/roboto-slab-700.woff2'); 
+*/
 
-h1, .h1 {
-  // @include font-size(44px);
-  font-size: 44px ;
-  color: var(--primary);
-  text-transform: uppercase;
+::placeholder {
+  color: #666;
 }
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+input, textarea {
+  outline: none;
+  &:focus:required:invalid {
+      border-color: var(--red);
+  }
+  &:required:valid {
+      border-color: var(--green);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  &-track {
+    background-color: #F0EAE2;
+  }
+  &-thumb {
+    border-radius: 5px;
+    background-color: var(--secondary);
+    &:hover {
+      background-color: var(--secondary);
+    }
+  }
+}
+
+body {
+  font-family: var(--userfont);
+  font-size: var(--fontsize);
+  line-height: var(--lineheight);
+  color: var(--textcolor);
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--bgbody);
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: var(--transition);
+  &:hover {
+      color: var(--primary);
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+  color: var(--black);
+}
+
 h2, .h2 {
-  // @include font-size(40px);
   font-size: 40px;
   color: var(--primary);
   text-transform: uppercase;
 }
-/* 
-.btn-primary {
-  @include button-variant($primary, $primary, #fff, transparent, $primary, $primary);
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.btn-header {
-  @include button-variant(#fff, $primary, $primary, $dar-devider, $dar-devider, #fff);
-  font-size: 15px;
-  padding: 8px 16px;
-} 
-*/
+.svg-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+// buttons
+
 .btn {
   --bs-btn-padding-x: 32px;
   --bs-btn-padding-y: 10px;
-  --bs-btn-font-family: ;
+  // --bs-btn-font-family: ;
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 400;
   --bs-btn-line-height: 1.5;
@@ -116,6 +168,7 @@ h2, .h2 {
   background-color: var(--bs-btn-bg);
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
 .btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: var(--primary);
@@ -132,11 +185,101 @@ h2, .h2 {
   --bs-btn-disabled-bg: #0d6efd;
   --bs-btn-disabled-border-color: #0d6efd;
 }
-.btn-header {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: var(--dar-devider);
-  --bs-btn-border-color: var(--dar-devider);
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: transparent;
-  --bs-btn-hover-border-color: var(--dar-devider);
+
+/* header */
+.header, .footer {
+  background-color: $primary;
+  color: #fff;
+  a {
+      color: #fff;
+      text-decoration: none;
+      &+span {
+          color: var(--dar-gold);
+      }
+      &:hover {
+          text-decoration: underline;
+      }
+  }
+  .btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--dar-devider);
+    --bs-btn-border-color: var(--dar-devider);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-hover-border-color: var(--dar-devider);
+  }
 }
+
+/* navbar */
+.navbar {
+  --bs-navbar-padding-x: 0;
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-color: #fff;
+  --bs-navbar-hover-color: var(--dar-gold);
+  --bs-navbar-active-color: var(--dar-gold);
+  --bs-navbar-nav-link-padding-x: 10px;
+  .navbar-nav {
+      --bs-nav-link-padding-x: 5px;
+      --bs-nav-link-padding-y: 12px;
+      .nav-item {
+          @media (min-width: $lg) {
+              .nav-link {
+                  border-right: 1px solid var(--dar-devider);
+              }
+              &:last-child .nav-link {
+                  border: none;
+              } 
+          }
+
+      } 
+  }
+}
+.dropdown-menu {
+  --bs-dropdown-zindex: 1000;
+  --bs-dropdown-min-width: 10rem;
+  --bs-dropdown-padding-x: 0;
+  --bs-dropdown-padding-y: 0;
+  --bs-dropdown-spacer: 0.125rem;
+  --bs-dropdown-font-size: 1rem;
+  --bs-dropdown-color: #fff;
+  --bs-dropdown-bg: var(--primary);
+  --bs-dropdown-border-color: var(--primary);
+  --bs-dropdown-border-radius: 0;
+  --bs-dropdown-border-width: 1px;
+  --bs-dropdown-inner-border-radius: 0;
+  --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
+  --bs-dropdown-divider-margin-y: 0.5rem;
+  --bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --bs-dropdown-link-color: #fff;
+  --bs-dropdown-link-hover-color: var(--dar-gold);
+  --bs-dropdown-link-hover-bg: transparent;
+  --bs-dropdown-link-active-color: var(--dar-gold);
+  --bs-dropdown-link-active-bg: transparent;
+  --bs-dropdown-link-disabled-color: #adb5bd;
+  --bs-dropdown-item-padding-x: 1rem;
+  --bs-dropdown-item-padding-y: 0.25rem;
+  position: absolute;
+  z-index: var(--bs-dropdown-zindex);
+  display: none;
+  min-width: var(--bs-dropdown-min-width);
+  padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);
+  margin: 0;
+  font-size: var(--bs-dropdown-font-size);
+  color: var(--bs-dropdown-color);
+  text-align: left;
+  list-style: none;
+  background-color: var(--bs-dropdown-bg);
+  background-clip: padding-box;
+  border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
+  border-radius: var(--bs-dropdown-border-radius);
+  li {
+      .dropdown-item {
+          border-bottom: 1px solid var(--dar-devider);
+      }
+      &:last-child .dropdown-item {
+          border: none; 
+      }  
+  }
+
+}
+

@@ -1,0 +1,31 @@
+/* main page */
+.main-header {
+    height: 505px;
+    background-image: url(../img/main_top_back.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .title-block {
+        h1 {
+            font-size: 44px ;
+            color: var(--primary);
+            text-transform: uppercase;            
+        }
+        h1+p {
+            color: var(--dar-pink);
+            font-size: 20px;
+            text-transform: uppercase;
+        }        
+    }
+}
+
+.our-specialists {
+
+}
+
+.our-advantages {
+    .advantage-el {
+        border: 1px solid var(--secondary);
+    }
+}

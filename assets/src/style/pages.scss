@@ -15,15 +15,17 @@
     background-attachment: fixed;
     .title-block {
         h1 {
-            font-size: 44px ;
+            // font-size: 44px;
+            @include font-size(44px);
             color: var(--primary);
-            text-transform: uppercase;            
+            text-transform: uppercase;
         }
         h1+p {
             color: var(--dar-pink);
-            font-size: 20px;
+            // font-size: 20px;
+            @include font-size(20px);
             text-transform: uppercase;
-        }        
+        }
     }
 }
 
@@ -36,7 +38,7 @@
         }
         li {
             a {
-                color: #000; 
+                color: #000;
                 display: block;
                 &:hover {
                     color: var(--primary);
@@ -45,9 +47,8 @@
             &:hover {
                 transform: scale(1.1);
                 transition: .5s;
-            }           
+            }
         }
-
     }
 }
 
@@ -86,11 +87,10 @@
                     background: none;
                     img {
                         margin-bottom: 10px;
-                    }                    
+                    }
                 }
             }
         }
-
     }
 }
 
@@ -98,7 +98,7 @@
     h2 {
         text-transform: none;
     }
-    h2 + p {
+    h2+p {
         color: var(--dar-gray);
     }
     background-color: var(--dar-bg);
@@ -124,7 +124,7 @@
             -moz-appearance: none;
             appearance: none;
             border-radius: 0;
-            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
             &:focus {
                 color: #212529;
                 background-color: transparent;

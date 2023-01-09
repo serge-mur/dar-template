@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.2.3",
+        "rfs": "^9.0.6",
         "swiper": "^8.4.5"
     },
     "devDependencies": {

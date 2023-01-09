@@ -1,4 +1,11 @@
 /* main page */
+
+.main {
+    section {
+        padding: 60px 0;
+    }
+}
+
 .main-header {
     height: 505px;
     background-image: url(../img/main_top_back.webp);
@@ -20,12 +27,115 @@
     }
 }
 
-.our-specialists {
+.directions-works {
+    .work-list {
+        column-width: 50%;
+        column-count: 1;
+        @media (min-width: $lg) {
+            column-count: 2;
+        }
+        li {
+            a {
+                color: #000; 
+                display: block;
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+            &:hover {
+                transform: scale(1.1);
+                transition: .5s;
+            }           
+        }
 
+    }
+}
+
+.our-specialists {
+    background-color: var(--dar-bg);
+    .nav-dar {
+        .btn {
+            margin: 10px 0;
+        }
+    }
 }
 
 .our-advantages {
     .advantage-el {
-        border: 1px solid var(--secondary);
+        background-color: #e8e6e624;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 1px 1px 5px 0 rgb(114 41 153 / 27%);
+        padding: 30px;
+        height: 100%;
+        color: var(--dar-gray);
+        img {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.video-slider {
+    background-color: var(--dar-bg);
+    .swiper-video {
+        background-color: #fff;
+        padding: 30px;
+        .swiper-wrapper {
+            .swiper-slide {
+                button {
+                    border: none;
+                    background: none;
+                    img {
+                        margin-bottom: 10px;
+                    }                    
+                }
+            }
+        }
+
+    }
+}
+
+.request {
+    h2 {
+        text-transform: none;
+    }
+    h2 + p {
+        color: var(--dar-gray);
+    }
+    background-color: var(--dar-bg);
+    form {
+        background-color: #fff;
+        padding: 30px;
+        .form-label {
+            color: var(--primary);
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid transparent;
+            border-bottom: 1px solid #000;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 0;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            &:focus {
+                color: #212529;
+                background-color: transparent;
+                border-color: transparent;
+                border-bottom: 1px solid var(--primary);
+                outline: 0;
+                box-shadow: none;
+            }
+        }
+    }
+    img {
+        box-shadow: 16px 16px var(--primary);
     }
 }

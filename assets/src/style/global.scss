@@ -4,6 +4,8 @@ $secondary: #d9c3ed;
 $dar-gold: #d8de3f;
 $dar-pink: #ed1566;
 $dar-devider: #8b4dc0;
+$dar-bg: #fff5f09e;
+$dar-gray: #757575;
 
 $xs: 0;
 $sm: 576px;
@@ -18,6 +20,8 @@ $xxl: 1400px;
   --dar-gold: #d8de3f;
   --dar-pink: #ed1566;
   --dar-devider: #8b4dc0;
+  --dar-bg: #fff5f09e;
+  --dar-gray: #757575;
 
   --black: #000000;
   --black--rgb: 0, 0, 0;
@@ -32,7 +36,10 @@ $xxl: 1400px;
   --userfont: rubik-ag, sans-serif;
   --secondfont: robotoslab-ag, serif;
   --transition: .3s ease;
+
+  --swiper-navigation-color: #000;
 }
+
 
 /* FONTS LOAD SECTION */
 /*
@@ -195,17 +202,26 @@ img {
       text-decoration: none;
       &+span {
           color: var(--dar-gold);
+          padding-left: 10px;
       }
       &:hover {
-          text-decoration: underline;
+          // text-decoration: underline;
+      }
+      &[href^="tel:"] {
+        background: url(../img/phone.webp) center left no-repeat;
+        padding-left: 25px;
+      }
+      &[href^="mailto:"] {
+        background: url(../img/email.webp) center left no-repeat;
+        padding-left: 25px;
       }
   }
   .btn-primary {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: var(--dar-devider);
+    --bs-btn-color: var(--primary);
+    --bs-btn-bg: #fff;
     --bs-btn-border-color: var(--dar-devider);
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: transparent;
+    --bs-btn-hover-bg: var(--dar-devider);
     --bs-btn-hover-border-color: var(--dar-devider);
   }
 }

@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function(event) {
 
     const mediaQueryMobile = window.matchMedia('(max-width: 576px)')
+
     function mediaChange(e) {
         if (e.matches) {
             console.log('mobile!')
         } else {
-            console.log('desktop!')  
+            console.log('desktop!')
         }
     }
     mediaQueryMobile.addListener(mediaChange)
@@ -29,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
             prevEl: '.swiper-button-prev',
         },
         pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+            el: ".swiper-pagination",
+            clickable: true,
         },
     });
 
@@ -46,8 +47,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
         modalBody.innerHTML = ''
     })
 
-
+    var rellax = new Rellax('.rellax');
 
 })
-
-

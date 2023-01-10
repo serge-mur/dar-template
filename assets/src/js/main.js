@@ -16,12 +16,16 @@ document.addEventListener('DOMContentLoaded', function(event) {
     let swiperVideo = new Swiper(".swiper-video", {
         slidesPerView: 1,
         slidesPerGroup: 1,
-        spaceBetween: 30,
+        spaceBetween: 24,
         autoHeight: true,
         grabCursor: true,
         breakpoints: {
             992: {
                 slidesPerView: 3,
+                slidesPerGroup: 1,
+            },
+            576: {
+                slidesPerView: 2,
                 slidesPerGroup: 1,
             },
         },
@@ -46,7 +50,5 @@ document.addEventListener('DOMContentLoaded', function(event) {
         const modalBody = videoModal.querySelector('.modal-body')
         modalBody.innerHTML = ''
     })
-
-    var rellax = new Rellax('.rellax');
 
 })

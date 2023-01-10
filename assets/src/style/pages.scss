@@ -2,17 +2,28 @@
 
 .main {
     section {
-        padding: 60px 0;
+        padding: 48px 0;
+        h2 {
+            margin-bottom: 48px;
+        }
+        @media (min-width: $lg) {
+            padding: 72px 0;
+            h2 {
+                margin-bottom: 72px;
+            }
+        }
     }
 }
 
 .main-header {
-    height: 505px;
     background-image: url(../img/main_top_back.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    @media (min-width: $lg) {
+        height: 505px;
+        background-attachment: fixed; 
+    }
     .title-block {
         h1 {
             // font-size: 44px;
@@ -25,6 +36,7 @@
             // font-size: 20px;
             @include font-size(20px);
             text-transform: uppercase;
+            font-family: 'Pfhandbook';
         }
     }
 }
@@ -40,6 +52,7 @@
             a {
                 color: #000;
                 display: block;
+                padding: 5px 0;
                 &:hover {
                     color: var(--primary);
                 }
@@ -66,11 +79,16 @@
         background-color: #e8e6e624;
         border-radius: 20px 20px 20px 20px;
         box-shadow: 1px 1px 5px 0 rgb(114 41 153 / 27%);
-        padding: 30px;
+        padding: 15px;
         height: 100%;
         color: var(--dar-gray);
+        font-size: 14px;
         img {
             margin-bottom: 15px;
+        }
+        @media (min-width: $lg) {
+            padding: 30px;
+            font-size: 16px;
         }
     }
 }
@@ -79,9 +97,10 @@
     background-color: var(--dar-bg);
     .swiper-video {
         background-color: #fff;
-        padding: 30px;
+        padding: 48px;
         .swiper-wrapper {
             .swiper-slide {
+                text-align: center;
                 button {
                     border: none;
                     background: none;
@@ -91,12 +110,22 @@
                 }
             }
         }
+        .swiper-pagination {
+            bottom: 15px;
+        }
+        .swiper-button-prev {
+            left: 20px;
+        }
+        .swiper-button-next {
+            right: 20px;
+        }
     }
 }
 
 .request {
     h2 {
         text-transform: none;
+        margin-bottom: 48px!important;
     }
     h2+p {
         color: var(--dar-gray);

@@ -94,7 +94,7 @@
 }
 
 .video-slider {
-    background-color: var(--dar-bg);
+    background-color: var(--dar-bg2);
     .swiper-video {
         background-color: #fff;
         padding: 48px;
@@ -104,8 +104,30 @@
                 button {
                     border: none;
                     background: none;
-                    img {
-                        margin-bottom: 10px;
+                    .preview {
+                        position: relative;
+                        margin-bottom: 16px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;                        
+                        .play-btn {
+                            position: absolute;
+                            width: 40px;
+                            height: 40px;
+                            background-image: url(../img/play.svg);
+                            background-size: contain;
+                            // opacity: .75;
+                            z-index: 1;
+                        }
+                        img {
+                            filter: brightness(.75);
+                        }
+                    }
+                    .title {
+                        color: #000;
+                        &:hover {
+                            color: var(--dar-gray);
+                        }
                     }
                 }
             }
@@ -130,7 +152,7 @@
     h2+p {
         color: var(--dar-gray);
     }
-    background-color: var(--dar-bg);
+    background-color: var(--dar-bg2);
     form {
         background-color: #fff;
         padding: 30px;

@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
     mediaChange(mediaQueryMobile)
 
 
+    const menuBtn = document.querySelector('.menu-btn')
+    menuBtn.addEventListener('click', event => {
+        menuBtn.classList.toggle('active');
+    })
+
     let swiperVideo = new Swiper(".swiper-video", {
         slidesPerView: 1,
         slidesPerGroup: 1,

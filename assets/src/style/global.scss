@@ -289,7 +289,11 @@ img {
 		--bs-nav-link-padding-y: .25rem;
 	}
 	.copyright {
-		font-size: 14px;
+		font-size: 12px;
+		text-align: center;
+		@media (min-width: $lg) {
+			font-size: 14px;
+		}
 	}
 }
 

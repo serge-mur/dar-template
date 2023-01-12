@@ -20,10 +20,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     let swiperVideo = new Swiper(".swiper-video", {
         slidesPerView: 1,
-        slidesPerGroup: 1,
+        // slidesPerGroup: 1,
         spaceBetween: 24,
-        autoHeight: true,
+        // autoHeight: true,
         grabCursor: true,
+        cssMode: true,
         breakpoints: {
             992: {
                 slidesPerView: 3,

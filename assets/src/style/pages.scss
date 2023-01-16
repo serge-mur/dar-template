@@ -237,14 +237,22 @@ section {
 
 /* programs */
 .programs {
+    h3 {
+        font-family: 'Avenir';
+        font-size: 20px;
+        margin-bottom: 24px;
+        color: var(--primary);
+    }
     .strelka {
-        width: 50px;
-        height: 120px;
-        background: url(../img/strelka_vverhleft.svg) no-repeat 0 30px;
+        width: 35px;
+        height: 200px;
+        background: url(../img/strelka_vniz_left_ful.svg) no-repeat 0 30px;
+        margin-top: -65px;
         @media (min-width: $lg) {
             width: 80px;
             height: 100px;
-            background: url(../img/strelka.svg) no-repeat 0 30px;;
+            background: url(../img/strelka_right.svg) no-repeat 0 30px;
+            margin-top: 0;
         }
     }
     .links-block {
@@ -252,9 +260,8 @@ section {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 5px;
+            padding: 10px;
             width: 100%;
-            height: 40px;
             border: 1px solid var(--primary);
             border-radius: 20px;
             color: #000;
@@ -262,6 +269,12 @@ section {
                 background-color: var(--secondary);
                 border: 1px solid #000;
                 color: #000;
+            }
+            @media (max-width: $sm) {
+                & {
+                    width: fit-content;
+                    padding: 10px 24px;
+                }
             }
         }
     }

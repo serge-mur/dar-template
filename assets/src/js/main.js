@@ -46,15 +46,18 @@ document.addEventListener('DOMContentLoaded', function(event) {
     });
 
     const videoModal = document.getElementById('videoModal')
-    videoModal.addEventListener('show.bs.modal', event => {
-        const button = event.relatedTarget
-        const video = button.getAttribute('data-bs-video')
-        const modalBody = videoModal.querySelector('.modal-body')
-        modalBody.innerHTML = `<div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/${video}?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`
-    })
-    videoModal.addEventListener('hidden.bs.modal', event => {
-        const modalBody = videoModal.querySelector('.modal-body')
-        modalBody.innerHTML = ''
-    })
+    if (videoModal) {
+        videoModal.addEventListener('show.bs.modal', event => {
+            const button = event.relatedTarget
+            const video = button.getAttribute('data-bs-video')
+            const modalBody = videoModal.querySelector('.modal-body')
+            modalBody.innerHTML = `<div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/${video}?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`
+        })
+        videoModal.addEventListener('hidden.bs.modal', event => {
+            const modalBody = videoModal.querySelector('.modal-body')
+            modalBody.innerHTML = ''
+        })
+    }
+
 
 })

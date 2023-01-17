@@ -262,7 +262,7 @@ section {
             align-items: center;
             padding: 10px;
             width: 100%;
-            border: 1px solid var(--primary);
+            border: 1px solid var(--secondary);
             border-radius: 20px;
             color: #000;
             &:hover {
@@ -283,6 +283,9 @@ section {
 /* start-speech */
 .start-speech {
     background-color: var(--dar-bg3);
+    h2 {
+        margin-bottom: 32px;
+    }
     .page-header {
         background-image: url(../img/start_speech_top_back.webp);
         background-position: center;
@@ -295,10 +298,20 @@ section {
             background-position: top;
         }         
     }
+    .intro {
+        padding-bottom: 0;
+    }
+    .text-block {
+        span {
+            color: var(--dar-pink);
+            font-weight: bold;
+        }
+    }
     .stages-course {
         .stage-card {
             text-align: center;
             box-shadow: 1px 1px 5px 0 rgb(114 41 153 / 27%);
+            transition: .25s;
             .card-body {
                 position: relative;
                 padding-top: 48px;
@@ -322,17 +335,23 @@ section {
                     font-weight: bold;
                 }                    
             }
+            &:hover {
+                // transform: translateY(-48px);
+                .card-body {
+                    background-color: #fff;
+                }
+            }
 
         }
     }       
     .programs-course {
         .program-card {
 	        --bs-card-spacer-x: 0;
-            padding: 0 24px;
+            padding: 0 24px 24px 24px;
             height: 100%;
             text-align: center;
             border: 1px solid transparent;
-            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
             .card-body {
                 h5 {
                     color: var(--primary);
@@ -343,12 +362,71 @@ section {
                 background-color: transparent;
                 border-top: none;
             }
-
+            @media (min-width: $md) {
+                border: 1px solid transparent;
+                border-right: 1px solid #000;
+            }
         }
         .row>div:last-child>.program-card {
-            border-right-color: transparent;
+            border-bottom-color: transparent;
         }
-    }    
+        @media (min-width: $md) {
+            .row>div:last-child>.program-card {
+                border-right-color: transparent;
+            }
+        }
+    }  
+    
+    .video-slider {
+        background-color: transparent;
+        .swiper-video {
+            background-color: #fff;
+            padding: 48px;
+            .swiper-wrapper {
+                .swiper-slide {
+                    text-align: center;
+                    button {
+                        border: none;
+                        background: none;
+                        .preview {
+                            position: relative;
+                            margin-bottom: 16px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;                        
+                            .play-btn {
+                                position: absolute;
+                                width: 40px;
+                                height: 40px;
+                                background-image: url(../img/play.svg);
+                                background-size: contain;
+                                // opacity: .75;
+                                z-index: 1;
+                            }
+                            img {
+                                filter: brightness(.75);
+                            }
+                        }
+                        .title {
+                            color: #000;
+                            &:hover {
+                                color: var(--dar-gray);
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-pagination {
+                bottom: 15px;
+            }
+            .swiper-button-prev {
+                left: 20px;
+            }
+            .swiper-button-next {
+                right: 20px;
+            }
+        }
+    } 
 
 
 

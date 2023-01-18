@@ -45,6 +45,33 @@ document.addEventListener('DOMContentLoaded', function(event) {
         },
     });
 
+    let swiperSlider = new Swiper(".swiper-slider", {
+        slidesPerView: 1,
+        // slidesPerGroup: 1,
+        spaceBetween: 24,
+        // autoHeight: true,
+        grabCursor: true,
+        cssMode: true,
+        breakpoints: {
+            992: {
+                slidesPerView: 3,
+                slidesPerGroup: 1,
+            },
+            576: {
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+            },
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
     const videoModal = document.getElementById('videoModal')
     if (videoModal) {
         videoModal.addEventListener('show.bs.modal', event => {

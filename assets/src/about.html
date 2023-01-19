@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    @@include('template/head.html',{ 'title': 'О нас', 'description': 'Описание страницы' })
+</head>
+
+<body>
+
+    @@include('template/header.html')
+
+    <main class="main about-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="page-title">О нас</h1> 
+                </div>
+            </div>
+        </div>
+
+        <section class="pt-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 mb-4">
+                        <img src="img/about_img.webp" alt="">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="text-block">
+                            <p>Детская академия речи - крупнейшее экспертное учреждение для помощи детям с задержкой речевого и психоречевого развития, алалией и расстройством аутистического спектра.</p>
+                            <p>С 2012 года нам доверяют родители неговорящих детей. За это время мы помогли заговорить более 15 000 детей. В нашей команде более 200 высококвалифицированных специалистов: логопеды, дефектологи, нейролингвисты, нейропсихологи, нейроабилитологи, детские речевые неврологи, психиатры, которые ежемесячно повышают свою квалификацию. Это помогает нам быть в профессиональном тонусе и избегать шаблонных подходов в диагностике нарушений и выборе эффективных методик реабилитации.</p>
+                        </div>
+                        <div class="mt-3 mt-lg-5">
+                            <a href="#" class="btn btn-primary">Программы занятий</a>
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @@include('template/footer.html')
+
+</body>
+
+</html>

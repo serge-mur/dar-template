@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    @@include('template/head.html',{ 'title': 'Контакты', 'description': 'Описание страницы' })
+</head>
+
+<body>
+
+    @@include('template/header.html')
+
+    <main class="main contacts-page">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="page-title">Контакты</h1>
+                    <div class="contacts-text">
+                        <div>Телефон для первичной записи в Москве: +7 (499) 290-21-15</div>
+                        <div>Телефон для первичной записи в Санкт-Петербурге: +7 (499) 290-21-15</div>
+                        <div>E-mail: dar@logoakademia.ru</div>
+                        <div>Юр. адрес: 123592, Москва, СЗАО, ул. Строгинский бульвар, д.14, к. 3, пом. ХI</div>
+                    </div>                     
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1aQa-q9HjOT97YkC4QSsXD8HPOk3AkCBi" width="100%" height="480"></iframe>
+                        <div class="address-list">
+                            <div class="address-el">
+                                <div class="name">ДАР Строгино</div>
+                                <div class="place">Строгинский б-р, 14 корпус 3</div>
+                            </div>
+                            <div class="address-el">
+                                <div class="name">ДАР Мневники</div>
+                                <div class="place">ул. Маршала Тухачевского, 32 корпус 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <iframe loading="lazy" src="https://www.google.com/maps/d/u/0/embed?mid=18GlQZcBVODFhTDzyLlJpJFRIVFi7h8Pt" width="100%" height="480"></iframe>
+                        <div class="address-list">
+                            <div class="address-el">
+                                <div class="name">ДАР Ладожская</div>
+                                <div class="place">пр-т Наставников, 24 корпус 3</div>
+                            </div>
+                            <div class="address-el">
+                                <div class="name">ДАР Маяковская</div>
+                                <div class="place">ул. Маяковского, 1/96</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <iframe loading="lazy" src="https://www.google.com/maps/d/embed?mid=1XOxTuE4ykUSsW5D6jKd0px13GxFKK18&amp;ehbc=2E312F" width="100%" height="480"></iframe>
+                        <div class="address-list">
+                            <div class="address-el">
+                                <div class="name">ДАР Магнитогорск</div>
+                                <div class="place">пр-т Наставников, 24 корпус 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @@include('template/footer.html')
+
+</body>
+
+</html>

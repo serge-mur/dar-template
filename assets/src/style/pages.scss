@@ -579,5 +579,50 @@ section {
 
 /* price-list */
 .price-list-page {
-    
+    .links-block {
+        h3 {
+            margin-bottom: 0;
+        }
+        .strelka {
+            width: 35px;
+            height: 165px;
+            background: url(../img/strelka_vniz_left_ful.svg) no-repeat 0 30px;
+            margin-top: -20px;
+            @media (min-width: $lg) {
+                width: 80px;
+                height: 100px;
+                background: url(../img/strelka_right.svg) no-repeat 0 30px;
+                margin-top: -35px;
+            }
+        }
+    }
+    .text-block {
+        h3 {
+            margin-bottom: 24px;
+        }
+        ul {
+            line-height: 1.5;
+        }
+    }
+}
+
+/* about */
+.about-page {
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+/* contactse */
+.contacts-page {
+    .address-list {
+        .address-el {
+            .name {
+                font-weight: bold;
+            }
+            .place {
+                color: var(--dar-gray);
+            }
+        }
+    }
 }

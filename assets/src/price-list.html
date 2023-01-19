@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    @@include('template/head.html',{ 'title': 'Прайс-лист', 'description': 'Описание страницы' })
+</head>
+
+<body>
+
+    @@include('template/header.html')
+
+    <main class="main price-list-page">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="page-title">Прайс-лист</h1>
+                </div>
+            </div>
+        </div>
+
+        <section class="city-links pt-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Центр какого города вас интересует?</h3>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="city-el">
+                                    <a href="#" class="btn btn-primary">Прайс</a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="city-el">
+                                    <a href="#" class="btn btn-primary">Прайс</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+        </section>
+
+    </main>
+
+    @@include('template/footer.html')
+
+</body>
+
+</html>

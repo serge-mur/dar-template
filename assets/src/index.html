@@ -9,7 +9,7 @@
 
     @@include('template/header.html')
 
-    <main class="main">
+    <main class="main main-page">
 
         <section class="main-header">
             <div class="container h-100">
@@ -69,6 +69,55 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 col-lg-9 d-flex align-items-center">
+                        <div class="row gx-3 gy-4 d-none d-lg-flex ps-4">
+                            <div class="col-4"><a href="#">Логопед-дефектолог</a></div>
+                            <div class="col-4"><a href="#">Клинический психолог</a></div>
+                            <div class="col-4"><a href="#">Детский психоневролог</a></div>
+
+                            <div class="col-4"><a href="#">Детский психолог</a></div>
+                            <div class="col-3"><a href="#">Нейроабилитолог</a></div>
+                            <div class="col-5"><a href="#">Детский речевой невролог</a></div>
+
+                            <div class="col-2"><a href="#">Логопед</a></div>
+                            <div class="col-3"><a href="#">Нейролингвист</a></div>
+                            <div class="col-4"><a href="#">Детский психиатр</a></div>
+                            <div class="col-3"><a href="#">Нейропсихолог</a></div>               
+                        </div>
+
+                        <div class="row gx-3 gy-3 d-lg-none">
+                            <div class="col-4"><a href="#">Логопед</a></div>
+                            <div class="col-8"><a href="#">Детский речевой невролог</a></div>
+
+                            <div class="col-5"><a href="#">Нейроабилитолог</a></div>
+                            <div class="col-7"><a href="#">Логопед-дефектолог</a></div>
+
+                            <div class="col-7"><a href="#">Клинический психолог</a></div>
+                            <div class="col-5"><a href="#">Нейролингвист</a></div>                          
+
+                            <div class="col-5"><a href="#">Детский психолог</a></div>
+                            <div class="col-7"><a href="#">Детский психоневролог</a></div>
+
+                            <div class="col-6"><a href="#">Нейроабилитолог</a></div> 
+                            <div class="col-6"><a href="#">Детский психиатр</a></div>                                         
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- <section class="our-specialists">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-3">
+                        <div class="row">
+                            <div class="col-6 col-lg-12">
+                                <h2>Наши специалисты</h2>
+                            </div>
+                            <div class="col-6 col-lg-12 d-flex justify-content-lg-center">
+                                <div class="strelka"></div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-12 col-lg-9">
                         <div class="nav-dar d-none d-sm-block ps-4">
                             <div class="d-flex justify-content-between flex-wrap">
@@ -113,7 +162,7 @@
                         </div>
                     </div>
                 </div>
-        </section>
+        </section> -->
 
         <section class="our-advantages">
             <div class="container">
@@ -226,38 +275,7 @@
             </div>
         </section>
 
-        <section class="request pt-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                        <h2>Беспокоит развитие ребенка?</h2>
-                        <p>Заполните заявку и получите консультацию специалиста</p>
-                        <form action="">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Имя</label>
-                                <input type="text" class="form-control" id="name" placeholder="">
-                            </div>
-                            <div class="mb-3">
-                                <label for="mail" class="form-label">Эл. почта *</label>
-                                <input type="email" class="form-control" id="mail" placeholder="">
-                            </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Телефон *</label>
-                                <input type="text" class="form-control" id="phone" placeholder="">
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Напишите сообщение</label>
-                                <textarea class="form-control" id="message" rows="3"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Отправить</button>
-                        </form>
-                    </div>
-                    <div class="col-lg-6 d-flex justify-content-center align-items-center">
-                        <img class="img-fluid" src="img/request_img.webp" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
+        @@include('template/feedback-form.html')
 
     </main>
 

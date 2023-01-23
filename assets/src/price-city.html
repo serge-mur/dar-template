@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    @@include('template/head.html',{ 'title': 'Прайс', 'description': 'Описание страницы' })
+</head>
+
+<body>
+
+    @@include('template/header.html')
+
+    <main class="main price-city-page">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="page-title">Прайс-лист Москва</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="accordion" id="price-accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse1" aria-expanded="true"
+                                    aria-controls="collapse1">
+                                    Диагностика
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="collapse1">
+                                <div class="accordion-body">
+
+                                    <table class="table table-hover price-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Диагностика</th>
+                                                <th>Стоимость</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="">
+                                            <tr>
+                                                <td>Сурдопедагог</td>
+                                                <td>2200 / 2000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Составление индивидуальной программы АВА-терапии</td>
+                                                <td>12000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Семейный психотерапевт/психотерапевт для взрослых</td>
+                                                <td>3500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Руководитель методического отдела</td>
+                                                <td>6000</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse2" aria-expanded="false"
+                                    aria-controls="collapse2">
+                                    Индивидуальное сопровождение
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse"
+                                aria-labelledby="collapse2">
+                                <div class="accordion-body">
+                                    <table class="table table-hover price-table">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Стоимость</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Индивидуальное сопровождение генерального директора, основателя сети
+                                                    Детская академия речи — 1 месяц</td>
+                                                <td>60000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Индивидуальное сопровождение руководителя методического отдела сети
+                                                    Детская академия речи — 1 месяцальное сопровождение методиста сети
+                                                    Детская академия речи — 1 месяц </td>
+                                                <td>40000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Индивидуальное сопровождение методиста сети Детская академия речи —
+                                                    1 месяц</td>
+                                                <td>25000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse3" aria-expanded="false"
+                                    aria-controls="collapse3">
+                                    Логопедия и дефектология (40 мин)
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse"
+                                aria-labelledby="collapse3">
+                                <div class="accordion-body">
+
+                                    <table class="table table-hover price-table">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Стоимость занятия</th>
+                                                <th>Стоимость занятия (6 и менее в месяц)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Индивидуальное занятие по подготовке к школе при отсутствии
+                                                    нарушений </td>
+                                                <td>60000</td>
+                                                <td>60000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Логопедическое занятия при мономорфной дислалии</td>
+                                                <td>40000</td>
+                                                <td>40000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Логопедическое занятия при полиморфной дислалии</td>
+                                                <td>25000</td>
+                                                <td>25000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    @@include('template/footer.html')
+
+</body>
+
+</html>

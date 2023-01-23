@@ -692,3 +692,13 @@ section {
 .specialists-page {
     background-color: var(--dar-bg3);
 }
+
+/* price-list-page */
+.price-city-page {
+    background-color: var(--dar-bg3);
+    padding-bottom: 48px;
+    .price-table {
+        background-color: #fff;
+    }
+
+}

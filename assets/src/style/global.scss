@@ -311,6 +311,9 @@ img {
 	.nav-item {
 		.nav-link {
 			border-right: 1px solid var(--dar-devider);
+			&.active {
+				color: var(--dar-gold);
+			}
 		}
 		&:last-child .nav-link {
 			border: none;
@@ -355,6 +358,9 @@ img {
 	background-clip: padding-box;
 	border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
 	border-radius: var(--bs-dropdown-border-radius);
+	.dropdown-item.active {
+		color: var(--dar-gold);
+	}
 }
 
 .offcanvas {

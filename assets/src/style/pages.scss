@@ -700,5 +700,11 @@ section {
     .price-table {
         background-color: #fff;
     }
+    .table-list {
+        .cat-title {
+            background-color: var(--primary);
+            color: #fff;
+        }
+    }
 
 }

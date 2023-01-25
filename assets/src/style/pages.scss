@@ -696,15 +696,96 @@ section {
 /* price-list-page */
 .price-city-page {
     background-color: var(--dar-bg3);
-    padding-bottom: 48px;
-    .price-table {
-        background-color: #fff;
+    padding-bottom: 24px;
+    @media (min-width: $lg) {
+        padding-bottom: 48px;
     }
-    .table-list {
-        .cat-title {
+    table.desktop-price {
+        background-color: #fff;  
+        font-size: 14px;
+        margin-bottom: 0;
+        thead {
+            background-color: var(--primary);
+            color: #fff;            
+        }  
+        tr {
+            td:first-child {
+                width: 70%;
+            }             
+            &.hdr {
+                font-weight: bold;
+            }
+        }  
+    }
+    .mob-price {
+        background-color: #fff;  
+        font-size: 14px;
+        .title {
             background-color: var(--primary);
             color: #fff;
+            padding: 8px;
+        }
+        .price-el {
+            .name {
+                background: url(../img/minus_ico.svg) right 8px center no-repeat #e8e6e6;
+                padding: 8px;
+                padding-right: 30px;
+                border-bottom: 1px solid #dee2e6;
+                // font-weight: bold;
+                &.collapsed {
+                    background: url(../img/plus_ico.svg) right 8px center no-repeat #fff;
+                }
+            }
+            .price-block {
+                display: flex;
+                border-bottom: 1px solid #dee2e6;
+                .legend {
+                    width: 70%;
+                    padding: 8px;
+                }
+                .price {
+                    width: 30%;
+                    padding: 8px;
+                }
+            }
+        }
+
+    }
+}
+
+/* spec-prof */
+.spec-prof-page {
+    background-color: var(--dar-bg3);
+    .page-header {
+        background-image: url(../img/spec_prof_back.webp);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 505px;
+        @media (min-width: $lg) {
+            height: 300px;
+            background-attachment: fixed; 
+            background-position-y: -105px;
+        }         
+    }
+    #inputSearch {
+        border-radius: 0;
+    }
+    .spec-list {
+        .spec-el {
+            padding: 24px 0;
+            border-bottom: 3px solid var(--primary);
+            .spec-preview {
+                h3 {
+                    color: var(--primary);
+                }
+            }
+            &:last-child {
+                border: none;
+            }
+            &:first-child {
+                padding-top: 0;
+            }
         }
     }
-
 }

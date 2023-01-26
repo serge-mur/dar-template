@@ -794,7 +794,51 @@ section {
     }
 }
 
-/* faq-page */
+/* faq */
 .faq-page {
 
+}
+
+/* documents */
+.documents-page {
+    section:nth-child(odd) {
+        background-color: var(--dar-bg2);
+    }
+    .request {
+        background-color: #fff;
+    }
+}
+/* news */
+.news-page {
+    background-color: var(--dar-bg3);
+    .cor-height { 
+        @media (min-width: $lg) {
+            min-height: 270px;
+        }
+    } 
+    .news-el {
+        padding-bottom: 24px;
+        @media (min-width: $lg) {
+            padding-bottom: 48px;
+        }
+    }
+    .text-block {
+        background-color: #fff;
+        margin: 0;
+        padding: 24px 16px;
+        @media (min-width: $lg) {
+            padding: 48px;
+            margin: -230px 0 0 0;
+        }
+        h3 {
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+    }
+
+}
+
+/* reviews */
+.reviews-page {
+    
 }

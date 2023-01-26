@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    @@include('template/head.html',{ 'title': 'Вопросы', 'description': 'Описание страницы' })
+</head>
+
+<body>
+
+    @@include('template/header.html')
+
+    <main class="main faq-page">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="page-title">Вопросы</h1>
+                </div>
+            </div>
+        </div>
+
+        <section class="pt-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Когда нужно обратиться к детскому неврологу?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="text-block">
+                                            <p>Родителю необходимо задуматься о консультации, если:</p>
+                                            <ul>
+                                                <li>Ребенок отстает от сверстников в речевом и/или интеллектуальном развитии</li>
+                                                <li>Ребенок крайне неусидчив</li>
+                                                <li>Ребенок периодически или постоянно говорит «взахлеб»</li>
+                                                <li>Ребенок очень быстро устает, истощается</li>
+                                                <li>Ребёнок испытывает трудности со сном</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        «Что делать, если мой ребёнок не говорит, мало говорит….?», «К кому обратиться и кто поможет?», «С чего начать..?».⠀
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="text-block">
+                                            <p>Если вас, что - то беспокоит в речевом развитии ребенка или есть хотя бы доля сомнений – не откладывайте, не ждите, обратитесь к логопеду-дефектологу.</p>
+                                            <p>После диагностики специалиста вы получите ответы на ваши вопросы и, если это необходимо, рекомендации по программе занятий, которая будет необходима и эффективна именно для вашего малыша.</p>
+                                            <p>Мы не устаем говорить, что ранняя диагностика речевых нарушений и своевременное начало коррекционных занятий увеличивает эффективность работы и способствует устранению сложностей, возникающих в речевом развитии ребенка.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Сколько занятий нужно, чтобы достичь результата?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="text-block">
+                                            <p>Ни один квалифицированный специалист не ответит вам на этот вопрос точной цифрой. Это зависит от множества факторов. На консультации мы сможем лишь определить примерные сроки.</p>
+                                            <p>Важно понимать, РЕЗУЛЬТАТ работы зависит от совместного труда специалиста, ребенка и его родителей!</p>
+                                            <p>Что делать, чтобы достичь успехов за меньшее количество занятий?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @@include('template/feedback-form.html')
+
+    </main>
+
+    @@include('template/footer.html')
+
+</body>
+
+</html>

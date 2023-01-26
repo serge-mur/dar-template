@@ -770,6 +770,10 @@ section {
     }
     #inputSearch {
         border-radius: 0;
+        &:focus {
+            box-shadow: none;
+            border-color: #ced4da;
+        }
     }
     .spec-list {
         .spec-el {
@@ -788,4 +792,9 @@ section {
             }
         }
     }
+}
+
+/* faq-page */
+.faq-page {
+
 }

@@ -233,6 +233,23 @@ img {
 	--bs-btn-disabled-border-color: #0d6efd;
 }
 
+.btn-secondary {
+	--bs-btn-color: #000;
+	--bs-btn-bg: transparent;
+	--bs-btn-border-color: var(--primary);
+	--bs-btn-hover-color: #000;
+	--bs-btn-hover-bg: transparent;
+	--bs-btn-hover-border-color: var(--primary);
+	--bs-btn-focus-shadow-rgb: 49, 132, 253;
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: var(--primary);
+	--bs-btn-active-border-color: var(--primary);
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	--bs-btn-disabled-color: #fff;
+	--bs-btn-disabled-bg: #0d6efd;
+	--bs-btn-disabled-border-color: #0d6efd;
+}
+
 /* header */
 .header,
 .footer {
@@ -471,4 +488,34 @@ img {
 	--bs-card-bg: transparent;
 	// --bs-card-img-overlay-padding: #{$card-img-overlay-padding};
 	// --bs-card-group-margin: #{$card-group-margin};
+}
+
+.accordion {
+	// --bs-accordion-color: #{$accordion-color};
+	// --bs-accordion-bg: #{$accordion-bg};
+	// --bs-accordion-transition: #{$accordion-transition};
+	// --bs-accordion-border-color: #{$accordion-border-color};
+	// --bs-accordion-border-width: #{$accordion-border-width};
+	--bs-accordion-border-radius: 0;
+	--bs-accordion-inner-border-radius: 0;
+	// --bs-accordion-btn-padding-x: #{$accordion-button-padding-x};
+	// --bs-accordion-btn-padding-y: #{$accordion-button-padding-y};
+	--bs-accordion-btn-color: var(--primary);
+	// --bs-accordion-btn-bg: #{$accordion-button-bg};
+	// --bs-accordion-btn-icon: #{escape-svg($accordion-button-icon)};
+	// --bs-accordion-btn-icon-width: #{$accordion-icon-width};
+	// --bs-accordion-btn-icon-transform: #{$accordion-icon-transform};
+	// --bs-accordion-btn-icon-transition: #{$accordion-icon-transition};
+	// --bs-accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)};
+	// --bs-accordion-btn-focus-border-color: #{$accordion-button-focus-border-color};
+	--bs-accordion-btn-focus-box-shadow: none;
+	// --bs-accordion-body-padding-x: #{$accordion-body-padding-x};
+	// --bs-accordion-body-padding-y: #{$accordion-body-padding-y};
+	--bs-accordion-active-color: var(--primary);
+	--bs-accordion-active-bg: transparent;
+	.accordion-button {
+		font-family: 'Avenir';
+		font-size: 16px;
+		font-weight: bold;
+	}
 }

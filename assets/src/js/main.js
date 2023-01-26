@@ -86,5 +86,19 @@ document.addEventListener('DOMContentLoaded', function(event) {
         })
     }
 
+    const imageModal = document.getElementById('imageModal')
+    if (imageModal) {
+        imageModal.addEventListener('show.bs.modal', event => {
+            const button = event.relatedTarget
+            const image = button.getAttribute('data-bs-image')
+            const modalBody = imageModal.querySelector('.modal-body')
+            modalBody.innerHTML = `<img src="${image}" alt="">`
+        })
+        imageModal.addEventListener('hidden.bs.modal', event => {
+            const modalBody = imageModal.querySelector('.modal-body')
+            modalBody.innerHTML = ''
+        })
+    }
+
 
 })

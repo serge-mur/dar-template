@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    @@include('template/head.html',{ 'title': 'ЛОГОПЕДЫ-ДЕФЕКТОЛОГИ И ЛОГОПЕДЫ-ПСИХОЛОГИ', 'description': 'Описание страницы' })
+    @@include('template/head.html',{ 'title': 'Логопеды-дефектологи и логопеды-психологи', 'description': 'Описание страницы' })
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="page-title">ЛОГОПЕДЫ-ДЕФЕКТОЛОГИ И ЛОГОПЕДЫ-ПСИХОЛОГИ</h1>
+                    <h1 class="page-title">Логопеды-дефектологи и логопеды-психологи</h1>
                 </div>
             </div>
         </div>
@@ -48,6 +48,9 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
+                        <div class="empty-message" style="display: none">
+                            Ничего не найдено
+                        </div>
                         <div class="spec-list">
                             <div class="spec-el">
                                 <div class="spec-preview">
@@ -80,7 +83,7 @@
                                         <li>Детская академия речи — «Томатис. Метод аудиовокальной стимуляции».</li>
                                     </ul>
                                 </div>
-                                <div class="text-end"><button class="btn btn-primary" data-bs-toggle="collapse" href="#collapse1">Подробнее</button></div>
+                                <div class=""><button class="btn btn-secondary" data-bs-toggle="collapse" href="#collapse1">Подробнее</button></div>
                             </div>
                             <div class="spec-el">
                                 <div class="spec-preview">
@@ -102,7 +105,7 @@
                                         <li>Детская академия речи — «Нейроакустическая стимуляция по методу ТОМАТИС».</li>
                                     </ul>
                                 </div>
-                                <div class="text-end"><button class="btn btn-primary" data-bs-toggle="collapse" href="#collapse2">Подробнее</button></div>
+                                <div class=""><button class="btn btn-secondary" data-bs-toggle="collapse" href="#collapse2">Подробнее</button></div>
                             </div>
                         </div>
 
@@ -118,12 +121,10 @@
     @@include('template/footer.html')
 
     <script>
-        function search() {
-            let input = document.getElementById("inputSearch");
-            let filter = input.value.toUpperCase();
-            
+        function allHidden() {
             let allHiddenEl = true
             let specEl = document.querySelectorAll('.spec-el')
+            let emptyMessage = document.querySelector('.empty-message')
             specEl.forEach((el) => {
                 if (getComputedStyle(el).display !== 'none') {
                     allHiddenEl = false
@@ -131,22 +132,25 @@
             })
             if(allHiddenEl == true) {
                 console.log('all hidden')
-            }            
-            
-            
-            let specElName = document.querySelectorAll('.spec-el .spec-preview h3')     
-            
+                emptyMessage.style.display = ""
+            } else {
+                emptyMessage.style.display = "none"
+            }              
+        }
+        function search() {
+            let input = document.getElementById("inputSearch");
+            let filter = input.value.toUpperCase();
+            let specElName = document.querySelectorAll('.spec-el .spec-preview h3')                
             for (let i = 0; i < specElName.length; i++) {
                 let specBlock = specElName[i].closest('.spec-el');
                 if (specElName[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    specBlock.style.display = "";
+                    specBlock.style.display = ""
+                    allHidden()
                 } else {
-                    specBlock.style.display = "none";
+                    specBlock.style.display = "none"
+                    allHidden()
                 }
-
-
             }
-
         }
 
         document.addEventListener('keyup', search);

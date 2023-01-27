@@ -840,5 +840,14 @@ section {
 
 /* reviews */
 .reviews-page {
-    
+    .card-link-review {
+        --bs-card-spacer-x: 0;
+        --bs-card-border-color: transparent;
+        a {
+            color: var(--textcolor);
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
 }

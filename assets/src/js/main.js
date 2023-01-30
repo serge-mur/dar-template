@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function (event) {
 
     const mediaQueryMobile = window.matchMedia('(max-width: 576px)')
 
@@ -100,5 +100,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
         })
     }
 
+    const btnCollapse = document.querySelectorAll('.btn-collapse')
+    btnCollapse.forEach((btn) => {
+        btn.addEventListener('click', event => {
+            if(event.target.classList.contains('collapsed')) {
+                event.target.innerHTML = 'Подробнее'
+            } else {
+                event.target.innerHTML = 'Скрыть'
+            }
+        })
+    })
 
 })

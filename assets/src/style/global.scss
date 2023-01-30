@@ -250,6 +250,23 @@ img {
 	--bs-btn-disabled-border-color: #0d6efd;
 }
 
+.btn-collapse {
+	--bs-btn-color: #000;
+	--bs-btn-bg: transparent;
+	--bs-btn-border-color: var(--primary);
+	--bs-btn-hover-color: #000;
+	--bs-btn-hover-bg: transparent;
+	--bs-btn-hover-border-color: var(--primary);
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: var(--primary);
+	--bs-btn-active-border-color: var(--primary);
+	background: url(../img/arrow-up-short.svg) no-repeat right 10px center transparent;
+	padding: 10px 34px 10px 24px;
+	&.collapsed {
+		background: url(../img/arrow-down-short.svg) no-repeat right 10px center transparent;
+	}
+}
+
 /* header */
 .header,
 .footer {

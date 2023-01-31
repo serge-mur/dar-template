@@ -895,6 +895,23 @@ section {
             }
         }
     }
+    .download-block {
+        a {
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            font-size: 18px;
+            font-weight: bold;
+            img {
+                padding-right: 24px;
+            }
+        }
+    }
+    .program-info {
+        ol {
+            line-height: 1.5;
+        }
+    }
     .stages-course {
         .stage-card {
             box-shadow: 1px 1px 5px 0 rgb(114 41 153 / 27%);
@@ -934,4 +951,115 @@ section {
 
         }
     }  
+}
+
+/* speech program */
+.speech-program-page {
+    background-color: var(--dar-bg3);
+    // padding: 24px 0;
+    // @media (min-width: $lg) {
+    //     padding: 48px 0;
+    // }
+    .cor-height { 
+        @media (min-width: $lg) {
+            min-height: 270px;
+        }
+    } 
+
+    .photo-card {
+        height: 100%;
+        background-color: #fff;
+    }
+
+    .text-preview-block {
+        background-color: #fff;
+        margin: 0;
+        padding: 24px 16px;
+        @media (min-width: $lg) {
+            padding: 48px;
+            margin: -230px 0 0 0;
+        }
+        h1 {
+            // font-size: 38px;
+            @include font-size(38px);
+        }
+    }
+    .text-detail-block {
+        h3 {
+            // font-size: 20px;
+            @include font-size(20px);
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+    }
+    .divider-photo-block {
+        background-image: url(../img/speech_stage_curs_back.webp);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        // height: 505px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 48px 0;
+        h3 {
+            color: #fff;
+            @include font-size(38px);            
+        }
+
+        @media (min-width: $lg) {
+            height: 300px;
+            background-attachment: fixed; 
+            background-position-y: -45px;
+        }  
+    }
+    .stages-course {
+        .stage-card {
+            box-shadow: 1px 1px 5px 0 rgb(114 41 153 / 27%);
+            background-color: #fff;
+            transition: .25s;
+            height: 100%;
+            .card-body {
+                position: relative;
+                padding-top: 48px;
+                .card-num {
+                    position: absolute;
+                    width: 80%;                        
+                    left: 0;
+                    right: 0;
+                    top: -25px;                 
+                    margin-left: auto;
+                    margin-right: auto;
+                    background-color: #fff;
+                    color: var(--primary);
+                    font-size: 22px;
+                    padding: 10px;
+                    border: 1px solid #000;
+                    text-align: center;
+                }
+                h5 {
+                    color: var(--primary);
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-align: center;
+                }    
+                .card-text {
+                    ul {
+                        padding: 24px 0;
+                        list-style: none;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                }                
+            }
+            &:hover {
+                // transform: translateY(-48px);
+                .card-body {
+                    background-color: #fff;
+                }
+            }
+
+        }
+    }
+
 }

@@ -862,12 +862,46 @@ section {
 .edu-direction-page {
     background-color: var(--dar-bg3);
     .progress-block {
-        .icon {
-            width: 80px;
-        }  
-        .progress-el {
-
+        .strelka {
+            position: absolute;
+            width: 35px;
+            height: 165px;
+            background: url(../img/strelka_vniz_left_ful.svg) no-repeat 0 5px;
+            margin-top: 30px;
+            @media (min-width: $md) {
+                position: static;
+                width: 80px;
+                height: 100px;
+                background: url(../img/strelka_right_vniz_purple.svg) no-repeat 0 5px;
+                margin-top: -1px;
+            }
         }
+        .strelka2 {
+            margin-top: 50px;
+            @media (min-width: $md) {
+                margin-top: 85px;
+
+            }
+        }
+        .progress-el {
+            height: 150px;
+            @media (min-width: $md) {
+                position: static;
+
+            }
+        }
+        .progress-el3 {
+            height: 85px;
+            @media (min-width: $md) {
+                margin-top: 150px;
+                height: 150px;
+            }
+        }
+        .progress-el2 {
+            @media (min-width: $md) {
+                margin-top: 80px;
+            }
+        }       
     }
     .text-photo {
         .text-block {
